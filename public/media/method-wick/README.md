@@ -14,6 +14,7 @@ Todos os caminhos públicos são definidos em `src/config/media.ts`. Nunca espal
 | `tailoring-navy-portrait.webp` | Retrato editorial secundário | 3:4 | Versão web 720×960. |
 | `tailoring-blue-portrait.webp` | Retrato editorial de identidade | 3:4 | Versão web 720×960. |
 | `tailoring-navy-detail.webp` | Detalhe de alfaiataria em reserva | 4:5 | Versão web 720×900; não renderizado nesta etapa. |
+| `method-consultation-portrait.jpg` | Consultoria de imagem no card do Método Wick | 40:71 | Fotografia real 640×1136. |
 | `tailoring-brown-detail.webp` | Detalhe de alfaiataria em reserva | 3:4 | Versão web 720×960; não renderizado nesta etapa. |
 | `consulting-01.mp4` | Cena editorial de consultoria | 16:9 | Master H.264, 1276×720, 63,2 s. Preservar. |
 | `consulting-01-poster.png` | Poster da consultoria | 16:9 | Frame real, 1276×720. |

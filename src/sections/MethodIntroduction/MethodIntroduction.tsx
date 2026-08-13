@@ -15,7 +15,7 @@ export function MethodIntroduction() {
           <article className={styles.folio}>
             <header><span>MR. WICK</span><span>SISTEMA 01—05</span></header>
             <div className={styles.folioBody}>
-              <EditorialImage asset={{ ...mediaConfig.authority.navyDetail, alt: '' }} className={styles.detail} />
+              <EditorialImage asset={mediaConfig.methodIntroduction.card} className={styles.detail} />
               <div className={styles.folioContent}>
                 <p>Método Wick</p>
                 <strong>Percepção<br />em construção.</strong>

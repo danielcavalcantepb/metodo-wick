@@ -54,6 +54,15 @@ export const mediaConfig = {
     detail: null,
     result: null,
   },
+  methodIntroduction: {
+    card: {
+      src: `${MEDIA_ROOT}/method-consultation-portrait.jpg`,
+      width: 640,
+      height: 1136,
+      alt: 'Consultoria de imagem durante o ajuste de um terno masculino.',
+      objectPosition: 'center center',
+    },
+  },
   authority: {
     documentary: {
       src: `${MEDIA_ROOT}/authority-studio-01.webp`,
