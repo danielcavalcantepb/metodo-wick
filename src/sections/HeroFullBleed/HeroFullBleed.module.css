@@ -35,7 +35,7 @@
 @media (max-width: 48rem) {
   .hero { min-height: 100svh; }
   .media video { object-position: 69% 34%; }
-  .grade { background: linear-gradient(180deg, rgb(4 22 17 / 0.96) 0%, rgb(5 28 22 / 0.91) 42%, rgb(5 28 22 / 0.54) 60%, rgb(3 17 13 / 0.14) 76%), linear-gradient(90deg, rgb(4 22 17 / 0.76) 0%, transparent 74%), linear-gradient(0deg, rgb(3 16 12 / 0.82) 0%, transparent 29%); }
+  .grade { background: linear-gradient(180deg, rgb(4 22 17 / 0.9) 0%, rgb(5 28 22 / 0.76) 38%, rgb(5 28 22 / 0.34) 59%, rgb(3 17 13 / 0.06) 76%), linear-gradient(90deg, rgb(4 22 17 / 0.58) 0%, rgb(4 22 17 / 0.18) 48%, transparent 82%), linear-gradient(0deg, rgb(3 16 12 / 0.7) 0%, transparent 27%); }
   .graphics { width: 180%; transform: translateX(-13%); }
   .grain { opacity: 0.017; }
   .arcs { stroke: rgb(168 131 97 / 0.1); }
