@@ -1,0 +1,51 @@
+.section { background: var(--color-green-950); color: var(--color-cream-100); }
+.story { min-height: 320svh; }
+.sticky { position: sticky; top: 0; display: flex; min-height: 100svh; flex-direction: column; justify-content: center; overflow: hidden; padding-block: calc(var(--header-height) + var(--space-5)) var(--space-7); }
+.heading { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--space-5); align-items: end; }
+.heading > :first-child { grid-column: 1 / span 3; color: var(--color-leather-400); }
+.heading h2 { grid-column: 5 / -1; font: 500 clamp(2.8rem, 5.5vw, 6.6rem)/0.88 var(--font-serif); letter-spacing: -0.05em; }
+.heading h2 span { display: block; }
+.heading h2 span:last-child { margin-left: clamp(2rem, 8vw, 9rem); color: var(--color-warm-gray-300); }
+.experience { position: relative; display: grid; grid-template-columns: 2fr 10fr; gap: var(--space-6); align-items: stretch; margin-top: clamp(3rem, 7vh, 6rem); }
+.experience::after { position: absolute; right: 0; bottom: -1.5rem; left: calc(16.666% + var(--space-6)); height: 1px; background: linear-gradient(90deg, var(--color-leather-400), transparent); content: ''; }
+.progress { display: flex; margin: 0; padding: 0; flex-direction: column; justify-content: space-between; border-right: 1px solid var(--color-line-light); list-style: none; color: var(--color-leather-400); font: 600 var(--text-xs)/1 var(--font-sans); letter-spacing: 0.16em; }
+.progress li { opacity: 0.28; }
+.progress li:first-child { opacity: 1; }
+.panels { position: relative; min-height: clamp(19rem, 38vh, 30rem); }
+.panel { display: grid; grid-template-columns: minmax(8rem, 0.8fr) 2fr; gap: clamp(2rem, 6vw, 8rem); align-items: end; min-height: 100%; }
+.section[data-enhanced='true'] .panel { position: absolute; inset: 0; }
+.number { color: rgb(244 240 229 / 0.12); font: 500 clamp(8rem, 18vw, 22rem)/0.68 var(--font-serif); letter-spacing: -0.08em; }
+.panelBody { align-self: center; max-width: 44rem; }
+.panelBody h3 { font: 500 clamp(3.8rem, 7.8vw, 9.5rem)/0.76 var(--font-serif); letter-spacing: -0.06em; text-transform: uppercase; }
+.lead { margin-top: var(--space-5); color: var(--color-leather-400); font: 500 clamp(1.45rem, 2.2vw, 2.6rem)/1.05 var(--font-serif); }
+.description, .detail { max-width: 48ch; margin-top: var(--space-5); color: var(--color-warm-gray-300); font-size: var(--text-sm); }
+.detail { padding-left: var(--space-4); border-left: 1px solid var(--color-leather-500); }
+.closing { position: relative; z-index: 2; padding-block: clamp(7rem, 13vw, 14rem); background: var(--color-cream-100); color: var(--color-green-900); }
+.closing p { font: 500 clamp(2.4rem, 5.5vw, 6.5rem)/0.98 var(--font-serif); letter-spacing: -0.04em; }
+.closing p:nth-child(2) { margin-left: clamp(1rem, 8vw, 9rem); }
+.closing p:nth-child(3) { margin-left: clamp(2rem, 16vw, 18rem); }
+@media (max-width: 48.0625rem) {
+  .story { min-height: auto; }
+  .sticky { position: relative; min-height: auto; padding-block: var(--section-space); }
+  .heading { grid-template-columns: repeat(4, 1fr); }
+  .heading > :first-child, .heading h2 { grid-column: 1 / -1; }
+  .heading h2 { margin-top: var(--space-6); font-size: clamp(3.2rem, 14vw, 5.2rem); }
+  .heading h2 span:last-child { margin-top: var(--space-2); margin-left: 1.5rem; }
+  .experience { display: block; margin-top: var(--space-9); }
+  .progress { display: none; }
+  .panels { min-height: auto; }
+  .panel { display: block; min-height: auto; padding-block: clamp(4.5rem, 15vw, 7rem); border-top: 1px solid var(--color-line-light); }
+  .panel:last-child { border-bottom: 1px solid var(--color-line-light); }
+  .number { font-size: clamp(6rem, 32vw, 10rem); }
+  .panelBody { margin-top: -1rem; margin-left: clamp(1.5rem, 9vw, 4rem); }
+  .panelBody h3 { font-size: clamp(3rem, 14vw, 5rem); }
+  .closing p { font-size: clamp(2.2rem, 10vw, 3.8rem); }
+  .closing p:nth-child(2), .closing p:nth-child(3) { margin-top: var(--space-5); margin-left: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  :global(html:not([data-motion-full])) .story { min-height: auto; }
+  :global(html:not([data-motion-full])) .sticky { position: relative; min-height: auto; padding-block: var(--section-space); }
+  :global(html:not([data-motion-full])) .progress { display: none; }
+  :global(html:not([data-motion-full])) .panels { min-height: auto; }
+  :global(html:not([data-motion-full])) .panel { position: relative; min-height: auto; padding-block: var(--space-8); border-top: 1px solid var(--color-line-light); }
+}

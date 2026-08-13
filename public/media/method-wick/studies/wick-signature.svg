@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" fill="none" stroke="#A88361" stroke-linecap="square" stroke-linejoin="miter">
+  <g id="wick-signature" stroke-width="16">
+    <path d="M126 414L251 153L314 331L468 201"/>
+    <path d="M216 415L314 331"/>
+    <path d="M251 153L278 222" stroke-width="5"/>
+  </g>
+</svg>

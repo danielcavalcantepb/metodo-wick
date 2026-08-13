@@ -1,0 +1,60 @@
+.hero { position: relative; overflow: hidden; min-height: clamp(40rem, 86svh, 52rem); padding-top: clamp(5.5rem, 8vw, 7.5rem); background: radial-gradient(ellipse at 43% 45%, rgb(18 61 49 / 0.52) 0%, rgb(12 43 34 / 0.24) 31%, transparent 59%), radial-gradient(circle at 86% 20%, rgb(168 131 97 / 0.07), transparent 29%), linear-gradient(116deg, #04130f 0%, var(--color-green-950) 24%, var(--color-green-900) 53%, var(--color-green-950) 78%, #03110d 100%); color: var(--color-cream-100); isolation: isolate; }
+.hero::before { position: absolute; z-index: 0; top: 7%; right: -17%; width: min(63vw, 65rem); aspect-ratio: 1; border: 1px solid rgb(168 131 97 / 0.14); border-radius: 50%; box-shadow: inset 0 0 0 clamp(5rem, 9vw, 10rem) rgb(6 24 19 / 0.025); content: ''; }
+.hero::after { position: absolute; z-index: 1; inset: 0; background: linear-gradient(90deg, rgb(3 17 13 / 0.26), transparent 33%, transparent 76%, rgb(3 17 13 / 0.18)), linear-gradient(0deg, rgb(3 17 13 / 0.22), transparent 32%); content: ''; pointer-events: none; }
+.backdrop { position: absolute; z-index: 1; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.grain { opacity: 0.026; mix-blend-mode: soft-light; }
+.arcs { fill: none; stroke: rgb(168 131 97 / 0.14); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.arcs path:first-of-type { stroke-dasharray: 2 8; opacity: 0.72; }
+.arcs path:last-of-type { opacity: 0.48; }
+.connections { fill: var(--color-green-950); stroke: rgb(168 131 97 / 0.24); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.connections path { fill: none; }
+.connections circle { stroke: rgb(168 131 97 / 0.5); }
+.abstractMark { fill: none; stroke: rgb(244 240 229 / 0.042); stroke-width: 2; vector-effect: non-scaling-stroke; }
+.frame { position: relative; z-index: 2; display: grid; min-height: clamp(33rem, 72svh, 44rem); grid-template-columns: minmax(0, 0.86fr) minmax(28rem, 1.14fr); gap: clamp(2rem, 5vw, 7rem); align-items: center; }
+.copy { position: relative; z-index: 3; padding-block: clamp(2rem, 5vh, 4rem); }
+.eyebrow { margin-bottom: clamp(1.5rem, 3vh, 2.5rem); color: var(--color-leather-400); }
+.copy h1 { max-width: 12.5ch; font: 500 clamp(3rem, 4.7vw, 5.65rem)/0.9 var(--font-serif); letter-spacing: -0.045em; text-wrap: balance; }
+.copy > p { max-width: 31ch; margin-top: clamp(1.5rem, 3vh, 2.5rem); color: rgb(244 240 229 / 0.7); font-size: clamp(0.94rem, 1.05vw, 1.12rem); line-height: 1.55; text-wrap: pretty; }
+.cta { min-width: min(100%, 19rem); margin-top: clamp(1.5rem, 3.5vh, 2.75rem); }
+.visual { position: relative; align-self: stretch; min-height: 32rem; margin-right: calc(var(--container-gutter) * -1); }
+.halo { position: absolute; z-index: 0; top: 6%; left: 12%; width: min(34vw, 31rem); aspect-ratio: 1; border: clamp(1.1rem, 2vw, 2rem) solid var(--color-cream-100); border-radius: 50%; outline: 1px solid rgb(168 131 97 / 0.24); outline-offset: clamp(1.4rem, 2.6vw, 2.8rem); opacity: 0.94; }
+.media { position: absolute; z-index: 1; inset: -2% 0 0 -3%; aspect-ratio: auto; background: transparent; clip-path: polygon(11% 0, 100% 0, 100% 100%, 0 100%, 0 17%); }
+.media video { object-fit: cover; object-position: 61% 34%; filter: saturate(0.88) contrast(1.03); }
+.visual::after { position: absolute; z-index: 2; inset: -2% 0 0 -3%; background: linear-gradient(90deg, rgb(6 24 19 / 0.34) 0%, transparent 45%), linear-gradient(0deg, rgb(6 24 19 / 0.68) 0%, transparent 32%); content: ''; pointer-events: none; clip-path: polygon(11% 0, 100% 0, 100% 100%, 0 100%, 0 17%); }
+.seals { position: absolute; z-index: 3; right: 0; bottom: 0; left: 4%; display: grid; grid-template-columns: repeat(5, 1fr); border-top: 1px solid rgb(244 240 229 / 0.2); background: rgb(6 24 19 / 0.9); }
+.seals span { display: grid; min-height: 4.4rem; place-items: center; align-content: center; gap: 0.28rem; border-right: 1px solid rgb(244 240 229 / 0.13); color: rgb(244 240 229 / 0.72); font: 600 0.58rem/1 var(--font-sans); letter-spacing: 0.08em; text-align: center; text-transform: uppercase; }
+.seals span:last-child { border-right: 0; }
+.seals i { color: var(--color-leather-400); font-style: normal; }
+.systemBar { position: relative; z-index: 5; display: grid; min-height: 2.65rem; grid-template-columns: 1.3fr repeat(5, 1fr) 1.3fr; align-items: center; border-bottom: 1px solid rgb(12 43 34 / 0.18); background: var(--color-cream-100); color: var(--color-green-950); }
+.systemBar span { padding-inline: 0.8rem; border-right: 1px solid rgb(12 43 34 / 0.13); font: 600 0.56rem/1 var(--font-sans); letter-spacing: 0.12em; text-align: center; text-transform: uppercase; }
+.systemBar span:last-child { border-right: 0; }
+
+@media (max-width: 64rem) {
+  .frame { grid-template-columns: minmax(0, 0.9fr) minmax(24rem, 1.1fr); }
+  .copy h1 { font-size: clamp(2.9rem, 5.4vw, 4.7rem); }
+  .visual { min-height: 30rem; }
+}
+
+@media (max-width: 48rem) {
+  .hero { min-height: auto; padding-top: 5.25rem; }
+  .frame { min-height: auto; grid-template-columns: 1fr; gap: 0; }
+  .copy { padding-block: 3.5rem 2.5rem; }
+  .copy h1 { max-width: 11.8ch; font-size: clamp(2.8rem, 13vw, 4.15rem); }
+  .copy > p { max-width: 28ch; }
+  .cta { min-width: min(100%, 18rem); }
+  .visual { min-height: 34rem; margin-inline: calc(var(--container-gutter) * -1); }
+  .halo { top: 3%; left: 25%; width: 70vw; }
+  .media { inset: 0 0 0 4%; clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 15%); }
+  .media video { object-position: 60% 31%; }
+  .visual::after { inset: 0 0 0 4%; clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 15%); }
+  .seals { right: 0; bottom: 0; left: 0; grid-template-columns: repeat(5, minmax(0, 1fr)); overflow: hidden; }
+  .seals span { min-height: 3.9rem; padding-inline: 0.2rem; font-size: 0.44rem; letter-spacing: 0.04em; overflow-wrap: anywhere; }
+  .systemBar { grid-template-columns: repeat(5, auto); padding: 0.85rem var(--container-gutter); gap: 0.5rem; overflow: hidden; }
+  .systemBar span:first-child, .systemBar span:last-child { display: none; }
+  .systemBar span { padding: 0; border: 0; font-size: 0.48rem; letter-spacing: 0.06em; white-space: nowrap; }
+  .backdrop { width: 180%; transform: translateX(-12%); }
+  .grain { opacity: 0.022; }
+  .abstractMark { stroke: rgb(244 240 229 / 0.035); }
+  .connections { stroke: rgb(168 131 97 / 0.18); }
+  .arcs { stroke: rgb(168 131 97 / 0.12); }
+}

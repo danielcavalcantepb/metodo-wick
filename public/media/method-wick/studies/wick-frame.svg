@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" fill="none" stroke="#A88361" stroke-linecap="square" stroke-linejoin="miter">
+  <g id="wick-frame" stroke-width="15">
+    <path d="M103 247V108H294"/>
+    <path d="M497 353V492H306"/>
+    <path d="M185 411L265 189H414"/>
+    <path d="M414 189L335 411H185"/>
+  </g>
+</svg>

@@ -1,0 +1,20 @@
+.section { min-height: 100svh; padding-block: calc(var(--header-height) + var(--space-9)) var(--space-9); background: var(--color-green-900); color: var(--color-cream-100); }
+.inner { display: flex; min-height: calc(100svh - var(--header-height) - 12rem); flex-direction: column; align-items: center; text-align: center; }
+.wordmark { color: var(--color-leather-400); font: 600 var(--text-xs)/1 var(--font-sans); letter-spacing: 0.3em; text-transform: uppercase; }
+.titleMask { width: 100%; margin-top: clamp(4rem, 8vh, 8rem); overflow: hidden; }
+.inner h2 { font: 500 clamp(5rem, 12vw, 15rem)/0.75 var(--font-serif); letter-spacing: -0.065em; text-transform: uppercase; }
+.line { width: min(100%, 64rem); height: 1px; margin-top: clamp(3rem, 6vh, 5rem); background: linear-gradient(90deg, transparent, var(--color-leather-400) 20%, var(--color-leather-400) 80%, transparent); }
+.echo { margin-top: clamp(4rem, 9vh, 8rem); }
+.echo p { font: 500 clamp(2rem, 3.5vw, 4.4rem)/1 var(--font-serif); }
+.echo p:last-child { margin-top: var(--space-3); color: var(--color-leather-400); }
+.cta { margin-top: clamp(3rem, 7vh, 6rem); }
+.signature { margin-top: auto; padding-top: var(--space-9); color: var(--color-warm-gray-300); font: 500 var(--text-sm)/1.4 var(--font-serif); font-style: italic; }
+@media (max-width: 48.0625rem) {
+  .section { min-height: auto; padding-block: clamp(8rem, 25vw, 12rem) var(--space-9); }
+  .inner { min-height: auto; }
+  .titleMask { margin-top: var(--space-9); }
+  .inner h2 { font-size: clamp(4.5rem, 23vw, 7.5rem); }
+  .echo p { font-size: clamp(2.2rem, 10vw, 3.7rem); }
+  .cta { width: 100%; }
+  .signature { margin-top: var(--space-10); padding-top: 0; }
+}

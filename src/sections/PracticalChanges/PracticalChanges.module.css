@@ -1,0 +1,25 @@
+.section { position: relative; padding-block: clamp(6rem, 9vw, 9rem); background: transparent; color: var(--color-cream-100); }
+.heading { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--space-5); align-items: end; }
+.heading > :first-child { grid-column: 1 / span 3; color: var(--color-leather-400); }
+.heading h2 { grid-column: 5 / -1; max-width: 12ch; color: var(--color-cream-100); font: 500 clamp(3rem, 5.5vw, 6.6rem)/0.9 var(--font-serif); letter-spacing: -0.045em; text-wrap: balance; }
+.territories { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(0.75rem, 1.5vw, 1.5rem); margin-top: clamp(4rem, 7vw, 7rem); padding: 0; list-style: none; }
+.territories li { position: relative; display: flex; min-height: clamp(19rem, 28vw, 27rem); padding: clamp(1.5rem, 3vw, 3rem); border: 1px solid var(--color-line-light); background: rgb(12 43 34 / 0.42); flex-direction: column; justify-content: space-between; }
+.territories li:nth-child(2) { margin-top: clamp(2rem, 4vw, 4rem); }
+.territories li:nth-child(3) { margin-top: clamp(4rem, 8vw, 8rem); }
+.number { align-self: start; padding-top: var(--space-6); color: var(--color-leather-500); font: 600 var(--text-xs)/1 var(--font-sans); letter-spacing: 0.16em; }
+.territories h3 { color: var(--color-cream-100); font: 500 clamp(2.6rem, 4.5vw, 5.5rem)/0.84 var(--font-serif); letter-spacing: -0.055em; text-transform: uppercase; }
+.territories p { max-width: 33ch; color: rgb(244 240 229 / 0.66); font-size: var(--text-base); text-wrap: pretty; }
+.closing { margin-top: clamp(5rem, 8vw, 8rem); }
+.closing p { font: 500 clamp(2.8rem, 6vw, 7rem)/0.92 var(--font-serif); letter-spacing: -0.045em; }
+.closing p:last-child { margin-top: var(--space-4); margin-left: clamp(2rem, 12vw, 14rem); color: var(--color-leather-400); }
+@media (max-width: 48.0625rem) {
+  .heading { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .heading > :first-child, .heading h2 { grid-column: 1 / -1; }
+  .heading h2 { margin-top: var(--space-7); font-size: clamp(3rem, 13vw, 5rem); }
+  .territories { margin-top: var(--space-9); }
+  .territories { display: flex; gap: var(--space-4); overflow-x: auto; scroll-snap-type: x mandatory; }
+  .territories li, .territories li:nth-child(2), .territories li:nth-child(3) { min-width: min(82vw, 22rem); min-height: 25rem; margin-top: 0; scroll-snap-align: start; }
+  .territories h3 { font-size: clamp(2.8rem, 13vw, 4.6rem); }
+  .closing p { font-size: clamp(2.7rem, 12vw, 4.4rem); }
+  .closing p:last-child { margin-top: var(--space-5); margin-left: 0; }
+}

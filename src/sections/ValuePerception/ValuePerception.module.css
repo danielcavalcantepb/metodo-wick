@@ -1,0 +1,42 @@
+.section { position: relative; z-index: 4; margin-top: clamp(-8rem, -9vw, -4rem); padding: 0 clamp(0.55rem, 1.4vw, 1.25rem); background: var(--color-charcoal-950); color: var(--color-charcoal-900); }
+.panel { position: relative; overflow: hidden; padding-block: clamp(6rem, 10vw, 10rem) clamp(5.5rem, 9vw, 9rem); border: 1px solid rgb(12 43 34 / 0.16); border-radius: clamp(0.7rem, 1.2vw, 1.2rem); background: var(--color-cream-100); }
+.inner { position: relative; z-index: 2; }
+.header { display: grid; grid-template-columns: 3fr 9fr; gap: clamp(1.5rem, 4vw, 5rem); align-items: start; }
+.header > :first-child { margin-top: 0.65rem; color: var(--color-leather-500); }
+.header > div > p { color: var(--color-warm-gray-500); font: 600 0.62rem/1 var(--font-sans); letter-spacing: 0.15em; text-transform: uppercase; }
+.header h2 { max-width: 11ch; margin-top: 1rem; font: 500 clamp(3.5rem, 6.8vw, 8rem)/0.82 var(--font-serif); letter-spacing: -0.055em; }
+.header h2 i { color: var(--color-leather-500); font-style: normal; }
+.comparison { display: grid; min-height: clamp(27rem, 48vw, 40rem); grid-template-columns: minmax(0, 1fr) clamp(10rem, 16vw, 17rem) minmax(0, 1fr); margin-top: clamp(4rem, 7vw, 7rem); border-block: 1px solid var(--color-line-dark); }
+.side { padding: clamp(2rem, 4vw, 4.5rem); }
+.side:first-child { padding-left: 0; }
+.side:last-child { padding-right: 0; }
+.label { display: flex; align-items: center; gap: 0.8rem; color: var(--color-green-900); font: 700 0.66rem/1 var(--font-sans); letter-spacing: 0.14em; text-transform: uppercase; }
+.label span { display: grid; width: 2.1rem; aspect-ratio: 1; place-items: center; border: 1px solid rgb(12 43 34 / 0.24); border-radius: 50%; color: var(--color-leather-500); }
+.side ul { margin-top: clamp(2.2rem, 4vw, 4rem); padding: 0; list-style: none; }
+.side li { display: flex; min-height: clamp(3.5rem, 5vw, 5.4rem); align-items: center; border-bottom: 1px solid var(--color-line-dark); font: 500 clamp(1.65rem, 2.7vw, 3.35rem)/1 var(--font-serif); }
+.side li:first-child { border-top: 1px solid var(--color-line-dark); }
+.axis { position: relative; display: flex; align-items: center; justify-content: center; padding: 2rem; background: var(--color-green-950); color: var(--color-cream-100); flex-direction: column; text-align: center; }
+.axis > span { position: absolute; inset: 1.5rem 50%; width: 1px; background: linear-gradient(transparent, var(--color-leather-400) 25%, var(--color-leather-400) 75%, transparent); }
+.axis > span::before, .axis > span::after { position: absolute; left: 50%; width: 0.58rem; aspect-ratio: 1; border: 1px solid var(--color-leather-400); border-radius: 50%; background: var(--color-green-950); content: ''; transform: translateX(-50%); }
+.axis > span::before { top: 12%; }
+.axis > span::after { bottom: 12%; }
+.axis p { position: relative; z-index: 2; padding: 1rem 0.6rem; background: var(--color-green-950); color: var(--color-leather-400); font: 600 0.7rem/1 var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; }
+.axis small { position: relative; z-index: 2; max-width: 16ch; margin-top: 2rem; padding: 0.8rem; background: var(--color-green-950); color: rgb(244 240 229 / 0.56); font-size: 0.68rem; line-height: 1.5; }
+.conclusion { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 8vw, 10rem); align-items: start; margin-top: clamp(3rem, 6vw, 6rem); }
+.conclusion p:first-child { max-width: 30ch; color: var(--color-warm-gray-500); }
+.conclusion p:last-child { max-width: 33ch; font: 500 clamp(1.5rem, 2.4vw, 2.9rem)/1.08 var(--font-serif); text-wrap: balance; }
+
+@media (max-width: 48rem) {
+  .section { margin-top: -2.5rem; padding-inline: 0.35rem; }
+  .panel { padding-block: 5rem 5.5rem; border-radius: 0.55rem; }
+  .header { grid-template-columns: 1fr; }
+  .header h2 { font-size: clamp(3.6rem, 17vw, 6rem); }
+  .comparison { min-height: auto; grid-template-columns: 1fr; margin-top: 3.5rem; }
+  .side { padding: 3rem 0; }
+  .axis { min-height: 11rem; margin-inline: calc(var(--container-gutter) * -1); }
+  .axis > span { inset: 50% 1rem; width: auto; height: 1px; background: linear-gradient(90deg, transparent, var(--color-leather-400), transparent); }
+  .axis > span::before { top: 50%; left: 20%; transform: translate(-50%, -50%); }
+  .axis > span::after { right: 20%; bottom: auto; left: auto; top: 50%; transform: translate(50%, -50%); }
+  .axis small { max-width: 25ch; margin-top: 0.6rem; }
+  .conclusion { grid-template-columns: 1fr; gap: 1.5rem; }
+}

@@ -1,0 +1,46 @@
+:root {
+  --color-green-950: #061813;
+  --color-green-900: #0c2b22;
+  --color-green-800: #123d31;
+  --color-green-700: #1b5141;
+  --color-cream-100: #f4f0e5;
+  --color-cream-200: #eae4d6;
+  --color-charcoal-950: #0c0e0d;
+  --color-charcoal-900: #141715;
+  --color-charcoal-800: #222622;
+  --color-warm-gray-500: #8b887f;
+  --color-warm-gray-300: #bbb5a9;
+  --color-leather-500: #8a674a;
+  --color-leather-400: #a88361;
+  --color-line-dark: rgb(12 43 34 / 0.18);
+  --color-line-light: rgb(244 240 229 / 0.18);
+
+  --font-serif: 'Cormorant Garamond', 'Iowan Old Style', 'Baskerville', Georgia, serif;
+  --font-sans: 'Manrope', 'Avenir Next', 'Segoe UI', sans-serif;
+  --text-xs: clamp(0.68rem, 0.66rem + 0.08vw, 0.75rem);
+  --text-sm: clamp(0.84rem, 0.8rem + 0.15vw, 0.95rem);
+  --text-base: clamp(1rem, 0.94rem + 0.2vw, 1.12rem);
+  --text-lg: clamp(1.22rem, 1.08rem + 0.45vw, 1.55rem);
+  --text-display-sm: clamp(2.7rem, 2rem + 3vw, 5.8rem);
+  --text-display-lg: clamp(4.1rem, 2.2rem + 8vw, 11.5rem);
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+
+  --container-max: 116rem;
+  --container-gutter: clamp(1.25rem, 4vw, 5rem);
+  --header-height: clamp(4.75rem, 7vw, 6.5rem);
+  --section-space: clamp(5.5rem, 10vw, 11rem);
+  --radius-subtle: 0.2rem;
+  --duration-fast: 240ms;
+  --duration-medium: 480ms;
+  --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
+}

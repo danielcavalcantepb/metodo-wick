@@ -1,0 +1,5 @@
+.overlay { position: absolute; inset: 0; z-index: 1; }
+.soft { background: linear-gradient(90deg, rgb(4 13 10 / 0.48) 0%, rgb(4 13 10 / 0.08) 70%); }
+.medium { background: linear-gradient(90deg, rgb(3 12 9 / 0.72) 0%, rgb(3 12 9 / 0.24) 58%, rgb(3 12 9 / 0.1) 100%); }
+.strong { background: rgb(3 10 8 / 0.68); }
+.vignette { position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgb(0 0 0 / 0.22), transparent 32%, rgb(0 0 0 / calc(var(--vignette-opacity) * 1))); pointer-events: none; }

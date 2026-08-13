@@ -1,0 +1,21 @@
+.section { position: relative; z-index: 2; overflow: hidden; margin-top: -1px; padding: clamp(5rem, 8vw, 8rem) 0 clamp(3rem, 5vw, 5rem); background: transparent; color: var(--color-cream-100); }
+.section::before { position: absolute; top: 0; right: clamp(1.25rem, 8vw, 9rem); width: min(42vw, 38rem); height: 1px; background: var(--color-leather-400); content: ''; opacity: 0.62; }
+.section::after { position: absolute; top: clamp(2rem, 5vw, 5rem); right: clamp(1.25rem, 8vw, 9rem); bottom: 0; width: 1px; background: linear-gradient(transparent, var(--color-leather-400) 26%, var(--color-leather-400)); content: ''; opacity: 0.68; }
+.eyebrow { color: var(--color-leather-400); }
+.composition { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 0 clamp(1rem, 2vw, 2rem); margin-top: clamp(4rem, 8vw, 8rem); }
+.first, .second { font: 500 clamp(3rem, 6.4vw, 7.5rem)/0.92 var(--font-serif); letter-spacing: -0.045em; text-wrap: balance; }
+.first { grid-column: 1 / span 7; color: var(--color-cream-100); }
+.second { grid-column: 3 / -1; margin-top: clamp(3rem, 6vw, 6rem); color: var(--color-warm-gray-300); }
+.support { grid-column: 7 / span 4; max-width: 39ch; margin-top: clamp(2.5rem, 5vw, 5rem); color: rgb(244 240 229 / 0.68); font-size: var(--text-base); text-wrap: pretty; }
+.emphasis { grid-column: 1 / span 7; margin-top: clamp(3.5rem, 6vw, 6rem); color: var(--color-leather-400); font: 500 clamp(2.6rem, 5.2vw, 6rem)/0.98 var(--font-serif); letter-spacing: -0.035em; }
+.closing { grid-column: 8 / span 4; align-self: end; max-width: 28ch; margin-top: clamp(2rem, 4vw, 4rem); padding-left: var(--space-5); color: rgb(244 240 229 / 0.68); }
+.closing::before { display: block; width: 2.5rem; height: 1px; margin-bottom: var(--space-4); background: var(--color-leather-400); content: ''; }
+@media (max-width: 48rem) {
+  .composition { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: var(--space-9); }
+  .first { grid-column: 1 / -1; }
+  .second { grid-column: 1 / -1; margin-top: 5rem; padding-left: clamp(1.5rem, 10vw, 4rem); }
+  .support { grid-column: 2 / -1; margin-top: 4rem; }
+  .emphasis { grid-column: 1 / -1; margin-top: 6rem; }
+  .closing { grid-column: 2 / -1; margin-top: 3rem; }
+  .section::before, .section::after { right: var(--container-gutter); }
+}

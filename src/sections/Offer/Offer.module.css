@@ -1,0 +1,24 @@
+.section { position: relative; padding-block: clamp(8rem, 11vw, 13rem); background: var(--color-green-950); color: var(--color-cream-100); }
+.axis { position: absolute; inset: 0 auto 0 50%; width: 1px; background: var(--color-line-light); }
+.layout { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--space-5); }
+.heading { grid-column: 1 / span 6; align-self: center; }
+.heading > :first-child { color: var(--color-leather-400); }
+.heading h2 { max-width: 9ch; margin-top: var(--space-7); font: 500 clamp(4.2rem, 6.6vw, 8.2rem)/0.84 var(--font-serif); letter-spacing: -0.055em; }
+.product { grid-column: 8 / -1; align-self: center; padding: clamp(3rem, 5vw, 6rem) 0 clamp(3rem, 5vw, 6rem) clamp(1rem, 3vw, 4rem); border-block: 1px solid var(--color-line-light); }
+.name { color: var(--color-leather-400); font: 500 clamp(3.8rem, 5.7vw, 7rem)/0.84 var(--font-serif); letter-spacing: -0.05em; text-transform: uppercase; }
+.description { max-width: 30ch; margin-top: var(--space-6); color: var(--color-cream-100); font: 500 clamp(1.1rem, 1.45vw, 1.55rem)/1.5 var(--font-sans); letter-spacing: 0.035em; }
+.price { display: flex; margin-top: var(--space-8); flex-direction: column; }
+.price span, .price small { color: var(--color-warm-gray-300); font-size: var(--text-xs); text-transform: uppercase; }
+.price strong { margin-block: var(--space-3); font: 500 clamp(3rem, 5vw, 6rem)/1 var(--font-serif); }
+.benefits { margin: var(--space-7) 0 0; padding: 0; border-top: 1px solid var(--color-line-light); list-style: none; }
+.benefits li { padding-block: var(--space-4); border-bottom: 1px solid var(--color-line-light); }
+.guarantee { margin-top: var(--space-5); color: var(--color-warm-gray-300); font-size: var(--text-sm); }
+.cta { margin-top: var(--space-8); }
+@media (max-width: 48.0625rem) {
+  .axis { display: none; }
+  .layout { grid-template-columns: repeat(4, 1fr); }
+  .heading, .product { grid-column: 1 / -1; }
+  .heading h2 { font-size: clamp(4rem, 17vw, 6.5rem); }
+  .product { margin-top: var(--space-9); padding-top: var(--space-8); }
+  .cta { width: 100%; }
+}

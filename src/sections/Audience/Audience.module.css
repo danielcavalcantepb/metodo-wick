@@ -1,0 +1,16 @@
+.section { padding-block: var(--section-space); background: var(--color-cream-100); color: var(--color-charcoal-900); }
+.section h2 { max-width: 11ch; color: var(--color-green-900); font: 500 clamp(3.5rem, 8vw, 9rem)/0.86 var(--font-serif); letter-spacing: -0.055em; }
+.list { margin: clamp(6rem, 13vw, 13rem) 0 0; padding: 0; border-top: 1px solid var(--color-line-dark); list-style: none; }
+.list li { display: grid; grid-template-columns: 1fr 5fr 4fr 1fr; gap: var(--space-5); align-items: baseline; padding-block: clamp(1.8rem, 4vw, 4rem); border-bottom: 1px solid var(--color-line-dark); }
+.list li:nth-child(even) h3 { grid-column: 3; }
+.list li:nth-child(even) p { grid-column: 2; grid-row: 1; }
+.list span { color: var(--color-leather-500); font: 600 var(--text-xs)/1 var(--font-sans); letter-spacing: 0.14em; }
+.list h3 { font: 500 clamp(2rem, 4vw, 4.7rem)/0.95 var(--font-serif); letter-spacing: -0.035em; text-transform: uppercase; }
+.list p { max-width: 34ch; color: var(--color-warm-gray-500); font-size: var(--text-sm); }
+@media (max-width: 48.0625rem) {
+  .section h2 { font-size: clamp(3.5rem, 17vw, 6rem); }
+  .list li, .list li:nth-child(even) { grid-template-columns: 2.5rem 1fr; gap: var(--space-3) var(--space-4); }
+  .list li h3, .list li:nth-child(even) h3 { grid-column: 2; }
+  .list li p, .list li:nth-child(even) p { grid-column: 2; grid-row: auto; margin-top: var(--space-2); }
+  .list h3 { font-size: clamp(2.2rem, 11vw, 3.8rem); }
+}
