@@ -1,9 +1,12 @@
-.section { padding-block: var(--section-space); background: var(--color-green-900); color: var(--color-cream-100); }
+.section { position: relative; overflow: hidden; padding-block: var(--section-space); background: var(--color-green-900); color: var(--color-cream-100); }
+.section::before { position: absolute; right: -10vw; bottom: -28vw; width: 58vw; aspect-ratio: 1; border: 1px solid rgb(168 131 97 / 0.2); border-radius: 50%; content: ''; }
+.section::after { position: absolute; right: 20%; bottom: 0; width: 1px; height: 32%; background: linear-gradient(transparent, rgb(168 131 97 / 0.4)); content: ''; }
 .heading { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--space-5); align-items: end; }
 .heading > :first-child { grid-column: 1 / span 3; color: var(--color-leather-400); }
 .heading h2 { grid-column: 5 / -1; max-width: 13ch; font: 500 clamp(3rem, 6vw, 7rem)/0.9 var(--font-serif); letter-spacing: -0.045em; }
 .index { display: grid; grid-template-columns: 5fr 7fr; gap: clamp(3rem, 8vw, 10rem); align-items: start; margin-top: clamp(6rem, 12vw, 12rem); }
 .active { position: sticky; top: calc(var(--header-height) + var(--space-6)); min-height: 24rem; padding-right: var(--space-6); border-right: 1px solid var(--color-line-light); }
+.active::after { position: absolute; right: -0.3rem; bottom: 0; width: 0.58rem; aspect-ratio: 1; border: 1px solid var(--color-leather-400); border-radius: 50%; background: var(--color-green-900); content: ''; }
 .active span { color: var(--color-leather-400); font: 600 var(--text-xs)/1 var(--font-sans); letter-spacing: 0.16em; text-transform: uppercase; }
 .active p { margin-top: var(--space-7); font: 500 clamp(2.8rem, 5vw, 6rem)/0.92 var(--font-serif); letter-spacing: -0.04em; text-wrap: balance; }
 .list { border-top: 1px solid var(--color-line-light); }
@@ -17,5 +20,6 @@
   .heading h2 { margin-top: var(--space-7); font-size: clamp(3rem, 13vw, 5rem); }
   .index { display: block; margin-top: var(--space-9); }
   .active { position: relative; top: auto; min-height: 15rem; padding: 0 0 var(--space-7); border-right: 0; }
+  .active::after, .section::after { display: none; }
   .list button { min-height: 5.25rem; grid-template-columns: 2.25rem 1fr; }
 }

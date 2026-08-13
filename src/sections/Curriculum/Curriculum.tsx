@@ -17,7 +17,7 @@ export function Curriculum() {
   return (
     <section className={styles.section} id="conteudo" aria-labelledby="curriculum-title">
       <div className={`container ${styles.heading}`}>
-        <Eyebrow>O que você vai aprender</Eyebrow>
+        <Eyebrow>08 — Conteúdo</Eyebrow>
         <h2 id="curriculum-title">Um índice para construir presença.</h2>
       </div>
 

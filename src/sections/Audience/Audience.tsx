@@ -1,4 +1,5 @@
 import { useRef } from 'react'
+import { Eyebrow } from '../../components/ui/Eyebrow'
 import { audiences } from '../../content/audiences'
 import { gsap, useGSAP } from '../../motion/gsap'
 import { useReducedMotion } from '../../motion/useReducedMotion'
@@ -24,6 +25,7 @@ export function Audience() {
   return (
     <section ref={sectionRef} className={styles.section} id="publico" aria-labelledby="audience-title">
       <div className="container">
+        <Eyebrow>07 — Para quem é</Eyebrow>
         <h2 id="audience-title" data-audience>Para homens em movimento.</h2>
         <ol className={styles.list}>
           {audiences.map((audience, index) => (

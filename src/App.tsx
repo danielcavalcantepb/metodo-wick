@@ -3,6 +3,10 @@ import { HeroFullBleed } from './sections/HeroFullBleed/HeroFullBleed'
 import { MethodIntroduction } from './sections/MethodIntroduction/MethodIntroduction'
 import { MethodMechanismIntro } from './sections/MethodMechanismIntro/MethodMechanismIntro'
 import { ValuePerception } from './sections/ValuePerception/ValuePerception'
+import { Transformation } from './sections/Transformation/Transformation'
+import { PracticeAuthority } from './sections/PracticeAuthority/PracticeAuthority'
+import { Audience } from './sections/Audience/Audience'
+import { Curriculum } from './sections/Curriculum/Curriculum'
 import { WickSymbolStudy } from './studies/WickSymbolStudy/WickSymbolStudy'
 import styles from './App.module.css'
 
@@ -20,6 +24,10 @@ function App() {
         <MethodIntroduction />
         <ValuePerception />
         <MethodMechanismIntro />
+        <Transformation />
+        <PracticeAuthority />
+        <Audience />
+        <Curriculum />
       </main>
     </>
   )

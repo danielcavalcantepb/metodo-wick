@@ -44,9 +44,9 @@ export function PracticeAuthority() {
   return (
     <section ref={sectionRef} className={styles.section} id="pratica" aria-labelledby="practice-title">
       <div className={`container ${styles.heading}`}>
-        <Eyebrow data-authority-reveal>Da prática para o método</Eyebrow>
-        <h2 id="practice-title" data-authority-reveal>O Método Wick não nasceu de uma teoria.</h2>
-        <p data-authority-reveal>Nasceu da prática.</p>
+        <Eyebrow data-authority-reveal>06 — Evidência</Eyebrow>
+        <h2 id="practice-title" data-authority-reveal>Da experiência para o Método.</h2>
+        <p data-authority-reveal>Não nasceu de uma teoria. Nasceu da prática.</p>
       </div>
 
       <div className={`container ${styles.evidence}`} data-authority-media>

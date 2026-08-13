@@ -50,7 +50,7 @@ export function Transformation() {
       <div className={styles.story} data-transformation-story>
         <div className={styles.sticky}>
           <div className={`container ${styles.heading}`}>
-            <Eyebrow>Transformação</Eyebrow>
+            <Eyebrow>05 — Transformação</Eyebrow>
             <h2 id="transformation-title">Uma mudança de percepção.</h2>
           </div>
           <div className={`container ${styles.scenes}`}>
