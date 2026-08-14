@@ -4,6 +4,7 @@
 .header { display: grid; grid-template-columns: 3fr 9fr; gap: clamp(1.5rem, 4vw, 5rem); align-items: start; }
 .header > :first-child { margin-top: 0.65rem; color: var(--color-leather-500); }
 .header > div > p { color: var(--color-warm-gray-500); font: 600 0.62rem/1 var(--font-sans); letter-spacing: 0.15em; text-transform: uppercase; }
+.titleMask { overflow: hidden; }
 .header h2 { max-width: 11ch; margin-top: 1rem; font: 500 clamp(3.5rem, 6.8vw, 8rem)/0.82 var(--font-serif); letter-spacing: -0.055em; }
 .header h2 i { color: var(--color-leather-500); font-style: normal; }
 .comparison { display: grid; min-height: clamp(27rem, 48vw, 40rem); grid-template-columns: minmax(0, 1fr) clamp(10rem, 16vw, 17rem) minmax(0, 1fr); margin-top: clamp(4rem, 7vw, 7rem); border-block: 1px solid var(--color-line-dark); }

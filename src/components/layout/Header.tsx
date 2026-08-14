@@ -1,20 +1,29 @@
-import { useEffect, useState } from 'react'
+import { useRef, useState } from 'react'
 import { siteConfig } from '../../config/site'
+import { ScrollTrigger, useGSAP } from '../../motion/gsap'
 import { CTA } from '../ui/CTA'
 import styles from './Header.module.css'
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
+  const headerRef = useRef<HTMLElement>(null)
 
-  useEffect(() => {
-    const update = () => setIsScrolled(window.scrollY > 24)
-    update()
-    window.addEventListener('scroll', update, { passive: true })
-    return () => window.removeEventListener('scroll', update)
-  }, [])
+  useGSAP(() => {
+    const hero = document.querySelector<HTMLElement>('section[aria-labelledby="hero-title"]')
+    if (!hero) return
+    const trigger = ScrollTrigger.create({
+      trigger: hero,
+      start: 'top top-=24',
+      end: 'bottom top+=80',
+      onEnter: () => setIsScrolled(true),
+      onLeaveBack: () => setIsScrolled(false),
+      onRefresh: (self) => setIsScrolled(self.progress > 0),
+    })
+    return () => trigger.kill()
+  }, { scope: headerRef })
 
   return (
-    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
+    <header ref={headerRef} className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={`container ${styles.inner}`}>
         <a className={styles.wordmark} href="#top" aria-label="Mr. Wick — início">
           <span>MR.</span> WICK
