@@ -8,6 +8,10 @@ import { PracticeAuthority } from './sections/PracticeAuthority/PracticeAuthorit
 import { Audience } from './sections/Audience/Audience'
 import { Curriculum } from './sections/Curriculum/Curriculum'
 import { Offer } from './sections/Offer/Offer'
+import { Manifesto } from './sections/Manifesto/Manifesto'
+import { Faq } from './sections/Faq/Faq'
+import { FinalCta } from './sections/FinalCta/FinalCta'
+import { Footer } from './components/layout/Footer'
 import { WickSymbolStudy } from './studies/WickSymbolStudy/WickSymbolStudy'
 import styles from './App.module.css'
 
@@ -30,7 +34,11 @@ function App() {
         <Audience />
         <Curriculum />
         <Offer />
+        <Manifesto />
+        <Faq />
+        <FinalCta />
       </main>
+      <Footer />
     </>
   )
 }

@@ -16,7 +16,11 @@ export function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={`container ${styles.inner}`}>
-        <p>© {new Date().getFullYear()} Mr. Wick</p>
+        <div className={styles.brand}>
+          <strong>Mr. Wick</strong>
+          <span>Método Wick</span>
+        </div>
+        <p className={styles.copyright}>© {new Date().getFullYear()} Mr. Wick</p>
         {footerLinks.length > 0 && (
           <nav aria-label="Links institucionais">
             {footerLinks.map((item) => <a key={item.label} href={item.href}>{item.label}</a>)}

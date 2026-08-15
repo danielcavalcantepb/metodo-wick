@@ -23,11 +23,14 @@ export function Faq() {
   return (
     <section ref={sectionRef} className={styles.section} id="faq" aria-labelledby="faq-title">
       <div className={`container ${styles.layout}`}>
-        <h2 id="faq-title" data-faq-reveal>Perguntas frequentes.</h2>
+        <div className={styles.heading} data-faq-reveal>
+          <p>Informação essencial · 12</p>
+          <h2 id="faq-title">Perguntas frequentes.</h2>
+        </div>
         <div className={styles.items}>
           {faqItems.map((item, index) => (
             <details key={item.question} data-faq-reveal>
-              <summary><span>{String(index + 1).padStart(2, '0')}</span>{item.question}</summary>
+              <summary><span>{String(index + 1).padStart(2, '0')}</span><strong>{item.question}</strong></summary>
               <div className={styles.answer}><p>{item.answer}</p></div>
             </details>
           ))}
