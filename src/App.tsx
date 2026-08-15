@@ -7,6 +7,7 @@ import { Transformation } from './sections/Transformation/Transformation'
 import { PracticeAuthority } from './sections/PracticeAuthority/PracticeAuthority'
 import { Audience } from './sections/Audience/Audience'
 import { Curriculum } from './sections/Curriculum/Curriculum'
+import { Offer } from './sections/Offer/Offer'
 import { WickSymbolStudy } from './studies/WickSymbolStudy/WickSymbolStudy'
 import styles from './App.module.css'
 
@@ -28,6 +29,7 @@ function App() {
         <PracticeAuthority />
         <Audience />
         <Curriculum />
+        <Offer />
       </main>
     </>
   )

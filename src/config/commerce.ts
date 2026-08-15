@@ -1,22 +1,25 @@
-export type CommerceConfig = {
+export type CommercialPathConfig = {
+  price: number | null
   checkoutUrl: string | null
-  productPrice: number | null
-  productInstallments: number | null
-  guaranteeDays: number | null
-  benefits: readonly string[]
 }
 
-export const PRODUCT_PRICE: number | null = null
-export const PRODUCT_INSTALLMENTS: number | null = null
-export const CHECKOUT_URL: string | null = null
-export const GUARANTEE_DAYS: number | null = null
+export const CONSULTING_PRICE: number | null = 699.9
+export const CONSULTING_CHECKOUT_URL: string | null = null
+export const METHOD_PRICE: number | null = 299.9
+export const METHOD_CHECKOUT_URL: string | null = null
 
-export const commerceConfig: CommerceConfig = {
-  checkoutUrl: CHECKOUT_URL,
-  productPrice: PRODUCT_PRICE,
-  productInstallments: PRODUCT_INSTALLMENTS,
-  guaranteeDays: GUARANTEE_DAYS,
-  benefits: [],
+export const commerceConfig: {
+  consulting: CommercialPathConfig
+  method: CommercialPathConfig
+} = {
+  consulting: {
+    price: CONSULTING_PRICE,
+    checkoutUrl: CONSULTING_CHECKOUT_URL,
+  },
+  method: {
+    price: METHOD_PRICE,
+    checkoutUrl: METHOD_CHECKOUT_URL,
+  },
 }
 
-export const getPrimaryCtaHref = () => commerceConfig.checkoutUrl || '#oferta'
+export const getPrimaryCtaHref = () => commerceConfig.method.checkoutUrl || '#oferta'

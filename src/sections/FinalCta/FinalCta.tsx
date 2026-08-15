@@ -30,7 +30,7 @@ export function FinalCta() {
           <p>Sua imagem já está falando.</p>
           <p>Decida o que ela vai dizer.</p>
         </div>
-        <CTA href={commerceConfig.checkoutUrl ?? undefined} disabled={!commerceConfig.checkoutUrl} variant="light" className={styles.cta} data-final-detail>Quero começar</CTA>
+        <CTA href={commerceConfig.method.checkoutUrl ?? undefined} disabled={!commerceConfig.method.checkoutUrl} variant="light" className={styles.cta} data-final-detail>Quero começar</CTA>
         <p className={styles.signature} data-final-detail>O clássico resiste ao tempo.</p>
       </div>
     </section>
