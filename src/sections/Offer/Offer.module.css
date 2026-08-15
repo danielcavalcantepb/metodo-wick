@@ -31,7 +31,7 @@
   white-space: nowrap;
   pointer-events: none;
 }
-.ribbon span { min-width: max-content; font: 600 0.64rem/1 var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; }
+.ribbon span { flex: 0 0 auto; min-width: max-content; padding-right: 1.5rem; font: 600 0.64rem/1 var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; }
 .ribbonTop { top: 44rem; transform: rotate(-7deg); }
 .ribbonBottom { bottom: 8rem; transform: rotate(5deg); }
 
@@ -73,7 +73,6 @@
 .currency { margin: 0.2rem 0.48rem 0 0; }
 .cents { margin: 0.25rem 0 0 0.5rem; }
 .cta { width: 100%; justify-content: center; gap: 0; text-align: center; }
-.cta > span:last-child { display: none; }
 .territory:hover .cta, .territory:focus-visible .cta { opacity: 0.72; }
 
 @media (max-width: 64rem) {

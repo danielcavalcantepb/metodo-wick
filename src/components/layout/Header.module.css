@@ -9,4 +9,3 @@
 .nav a:hover::after { transform: scaleX(1); transform-origin: left; }
 .cta { justify-self: end; min-height: 2.8rem; padding-block: 0.65rem; }
 @media (max-width: 52rem) { .inner { grid-template-columns: 1fr auto; } .nav { display: none; } .wordmark { font-size: 1rem; } }
-@media (max-width: 27rem) { .cta span:last-child { display: none; } }

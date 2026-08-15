@@ -71,7 +71,9 @@ export function Offer() {
       </div>
 
       <div className={`${styles.ribbon} ${styles.ribbonTop}`} data-offer-ribbon="top" aria-hidden="true">
-        <span>Método Wick • Consultoria Wick • Método Wick • Consultoria Wick • Método Wick • Consultoria Wick</span>
+        {Array.from({ length: 12 }, (_, index) => (
+          <span key={index}>Método Wick • Consultoria Wick •</span>
+        ))}
       </div>
 
       <div className={`container ${styles.introduction}`}>
@@ -135,7 +137,9 @@ export function Offer() {
       </div>
 
       <div className={`${styles.ribbon} ${styles.ribbonBottom}`} data-offer-ribbon="bottom" aria-hidden="true">
-        <span>Consultoria Wick • Método Wick • Consultoria Wick • Método Wick • Consultoria Wick • Método Wick</span>
+        {Array.from({ length: 12 }, (_, index) => (
+          <span key={index}>Consultoria Wick • Método Wick •</span>
+        ))}
       </div>
     </section>
   )

@@ -49,7 +49,6 @@
   .copy h1 { max-width: 11.8ch; margin-inline: auto; font-size: clamp(2.8rem, 13vw, 4.15rem); }
   .copy > p { max-width: 100%; margin-inline: auto; font-size: clamp(0.72rem, 3.15vw, 0.84rem); }
   .cta { min-width: min(100%, 18rem); margin-inline: auto; gap: 0; text-align: center; }
-  .cta > span:last-child { display: none; }
   .pillars { overflow: hidden; }
   .pillars > div { width: 100%; min-width: 0; grid-template-columns: repeat(5, minmax(0, 1fr)); }
   .pillars span { min-height: 4rem; padding-inline: 0.2rem; font-size: 0.44rem; letter-spacing: 0.04em; overflow-wrap: anywhere; text-align: center; }
