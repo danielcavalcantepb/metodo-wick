@@ -14,7 +14,7 @@ type CTAProps = Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'href'> & {
 export function CTA({ children, href, variant = 'primary', disabled = false, className = '', ...props }: CTAProps) {
   const resolvedHref = href || getPrimaryCtaHref()
   const isExternal = /^https?:\/\//.test(resolvedHref)
-  const content = <><span>{children}</span><span className={styles.line} aria-hidden="true" /></>
+  const content = <span>{children}</span>
 
   if (disabled) {
     return <span className={`${styles.cta} ${styles[variant]} ${styles.disabled} ${className}`} aria-disabled="true">{content}</span>

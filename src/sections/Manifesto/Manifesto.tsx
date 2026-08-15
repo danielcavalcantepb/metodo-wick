@@ -14,9 +14,9 @@ export function Manifesto() {
     if (reducedMotion) return
 
     gsap.timeline({ scrollTrigger: { trigger: sectionRef.current, start: 'top 70%', once: true } })
-      .from('[data-manifesto-media]', { clipPath: 'inset(0 0 100% 0)', duration: 1, ease: 'power3.inOut' })
-      .from('[data-manifesto-line]', { y: 24, autoAlpha: 0, duration: 0.72, stagger: 0.12, ease: 'power3.out' }, '-=0.42')
-      .from('[data-manifesto-signature]', { scaleX: 0, transformOrigin: 'left', duration: 0.7, ease: 'power3.out' }, '-=0.34')
+      .from('[data-manifesto-media]', { clipPath: 'inset(0 0 100% 0)', duration: 1, ease: 'power3.inOut', clearProps: 'clipPath' })
+      .from('[data-manifesto-line]', { y: 24, autoAlpha: 0, duration: 0.72, stagger: 0.12, ease: 'power3.out', clearProps: 'transform,opacity,visibility' }, '-=0.42')
+      .from('[data-manifesto-signature]', { scaleX: 0, transformOrigin: 'left', duration: 0.7, ease: 'power3.out', clearProps: 'transform' }, '-=0.34')
   }, { scope: sectionRef, dependencies: [reducedMotion], revertOnUpdate: true })
 
   return (

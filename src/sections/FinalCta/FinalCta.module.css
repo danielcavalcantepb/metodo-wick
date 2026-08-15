@@ -20,10 +20,10 @@
   .folio, .wordmark { display: inline-block; }
   .wordmark { float: right; }
   .titleGroup { padding-block: clamp(5rem, 20vw, 8rem); }
-  .inner h2 { max-width: 11ch; font-size: clamp(3.7rem, 14.5vw, 5.8rem); }
-  .titleMask + .titleMask h2 { margin-top: var(--space-4); margin-left: clamp(1rem, 5vw, 2rem); }
+  .inner h2 { max-width: 11ch; margin-inline: auto; font-size: clamp(3.7rem, 14.5vw, 5.8rem); text-align: center; }
+  .titleMask + .titleMask h2 { margin-top: var(--space-4); }
   .action { display: block; padding-top: var(--space-7); }
-  .action p { max-width: 30ch; }
+  .action p { max-width: none; margin-inline: auto; text-align: center; }
   .cta { width: 100%; margin-top: var(--space-6); }
-  .signature { margin-top: var(--space-8); }
+  .signature { margin-top: var(--space-4); text-align: center; }
 }
