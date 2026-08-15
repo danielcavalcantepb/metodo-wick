@@ -46,8 +46,7 @@ export function Offer() {
       .from('[data-offer-index]', { y: 18, autoAlpha: 0, duration: 0.62, ease: 'power3.out', stagger: 0.1 }, '-=0.2')
       .from('[data-offer-copy]', { y: 20, autoAlpha: 0, duration: 0.7, ease: 'power3.out', stagger: 0.06 }, '-=0.28')
       .from('[data-offer-price]', { yPercent: 105, duration: 0.72, ease: 'power3.out', stagger: 0.1 }, '-=0.36')
-      .from('[data-offer-detail]', { y: 14, autoAlpha: 0, duration: 0.62, ease: 'power2.out', stagger: 0.08 }, '-=0.34')
-      .from('[data-offer-cta]', { y: 12, autoAlpha: 0, duration: 0.58, ease: 'power2.out', stagger: 0.08 }, '-=0.3')
+      .from('[data-offer-cta]', { y: 12, autoAlpha: 0, duration: 0.58, ease: 'power2.out', stagger: 0.08 }, '-=0.28')
   }, { scope: sectionRef, dependencies: [reducedMotion], revertOnUpdate: true })
 
   return (
@@ -86,13 +85,6 @@ export function Offer() {
                   </div>
 
                   {pathConfig.price !== null ? <EditorialPrice value={pathConfig.price} /> : null}
-
-                  <div className={styles.details} data-offer-detail>
-                    <p>{option.detailLabel}</p>
-                    <ul>
-                      {option.details.map((detail) => <li key={detail}>{detail}</li>)}
-                    </ul>
-                  </div>
 
                   <div data-offer-cta>
                     <CTA
